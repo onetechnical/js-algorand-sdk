@@ -2,9 +2,9 @@ name: CI - Test Suite
 
 on:
   pull_request:
-    branches: [ main ]
+    branches: [ main-test ]
   push:
-    branches: [ main ]
+    branches: [ main-test ]
 
 env:
   NODE_VERSION: '22'
@@ -115,7 +115,7 @@ jobs:
     permissions:
       pages: write
       id-token: write
-    if: github.ref == 'refs/heads/main'
+    if: github.ref == 'refs/heads/main-test'
     steps:
       - name: Checkout code
         uses: actions/checkout@v4
