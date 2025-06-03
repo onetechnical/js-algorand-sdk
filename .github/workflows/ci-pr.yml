@@ -116,6 +116,8 @@ jobs:
       pages: write
       id-token: write
     if: github.ref == 'refs/heads/main-test'
+    environment:
+      name: github-pages
     steps:
       - name: Checkout code
         uses: actions/checkout@v4
